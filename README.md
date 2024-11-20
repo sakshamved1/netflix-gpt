@@ -39,7 +39,18 @@
 - useTopularMovies Custom Hook
 - useTrendingMovies Custom Hook
 
+# Part3
 
+- GPT Search feature
+- GPT search Bar
+- Multi-Language feature in our App [Bonus]
+- 
+-
+-
+-
+-
+-
+-
 
 
 

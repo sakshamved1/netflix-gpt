@@ -7,6 +7,10 @@ import { useSelector } from "react-redux";
 import { onAuthStateChanged } from "firebase/auth";
 import { useDispatch } from "react-redux";
 import { addUser, removeUser } from "../utils/userSlice";
+import { toggleGptSearchView } from "../utils/gptSlice";
+import { SUPPORTED_LANGUAGES } from "../utils/constants";
+import lang from "../utils/languageConstant";
+import { changeLanguage } from "../utils/configSlice";
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -47,6 +51,17 @@ const Header = () => {
     return () => unsubscribe(); // Cleanup subscription
   }, []);
 
+  const handleGptSearchClick = () => {
+    //Toggle GPT Search button
+    dispatch(toggleGptSearchView());
+  };
+
+  const handleLanguageChange = (e) => {
+    dispatch(changeLanguage(e.target.value));
+  };
+
+  const showGptSearch = useSelector((store) => store.gpt.showGptSearch);
+
   return (
     <div className="absolute flex justify-between w-full px-6 py-2 bg-gradient-to-b from-black z-10">
       <img
@@ -57,6 +72,24 @@ const Header = () => {
 
       {user && (
         <div className="flex p-2">
+          {showGptSearch && (
+            <select
+              className="m-16 p-2 bg-gray-900 text-white"
+              onClick={handleLanguageChange}
+            >
+              {SUPPORTED_LANGUAGES.map((lang) => (
+                <option key={lang.identifier} value={lang.identifier}>
+                  {lang.name}
+                </option>
+              ))}
+            </select>
+          )}
+          <button
+            className="bg-purple-800 text-white px-4 py-2 my-16 rounded-lg"
+            onClick={handleGptSearchClick}
+          >
+           {showGptSearch ? "Home page" :  "GPT Search"}
+          </button>
           <img
             className="h-8 m-16"
             alt="user-icon"
