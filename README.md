@@ -44,13 +44,16 @@
 - GPT Search feature
 - GPT search Bar
 - Multi-Language feature in our App [Bonus]
-- 
+- Integerated Open ai Api  & Fetching  movie Names from that
+- Used TMDB api to Fetch movieResults from the name We've gpt from TMDB API
+- Added Secret Things to .env file
 -
 -
 -
 -
--
--
+
+
+
 
 
 
