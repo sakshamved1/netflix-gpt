@@ -45,12 +45,14 @@
 - GPT search Bar
 - Multi-Language feature in our App [Bonus]
 - Integerated Open ai Api  & Fetching  movie Names from that
-- Used TMDB api to Fetch movieResults from the name We've gpt from TMDB API
+- Used TMDB api to Fetch movieResults from the name We've got from gptQuery
 - Added Secret Things to .env file
--
--
--
--
+- Added Gemini Api instead of Gpt Api & changed everything from GPT to Gemini
+- Created geminiSlice and added Data
+- reused movieList component to show Searched Movie results
+- Used Memorization to Avoid Unnecessary APi calls
+- Made our Site responsive
+
 
 
 

@@ -22,4 +22,7 @@ export const SUPPORTED_LANGUAGES = [
 ];
 
 
-export const OEPNAI_KEY = process.env.REACT_APP_OEPNAI_KEY;
+// export const OEPNAI_KEY = process.env.REACT_APP_OEPNAI_KEY;
+
+export const GOOGLE_API_KEY = "AIzaSyDIOy5LkS3mChpJX7JGNrfcqJwMZ0ZpCeg";
+
